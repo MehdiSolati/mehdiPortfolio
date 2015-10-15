@@ -1,8 +1,8 @@
  body {
-     background-color: #fcfcfc;
-     font-size: 14px;
-     font-family: "Roboto";
-     color: #fff;
+    background-color: #fcfcfc;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: #212121;
  }
  .small {
      font-size: 10.5px;
@@ -23,21 +23,53 @@
      height: 400px;
      display: inline-block;
  }
+ .frostedGlass {
+    -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+ }
+ .frostedGlass:hover {
+    -webkit-filter: blur(0);
+  -moz-filter: blur(0);
+  -o-filter: blur(0);
+  -ms-filter: blur(0);
+  filter: blur(0);
+ }
+
+ .sideScroll {
+    max-width: 100%;
+    overflow: auto;
+    height: 430px;
+    white-space: nowrap;
+}
+
+.sideScrollContent {
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+}
+
+.skillsLogos {
+    max-height: 200px;
+    max-width: 550px;
+}
  nav ul a,
  nav .brand-logo {
-     color: #000;
+     color: #fafafa;
  }
  a {
-     color: #fff;
+     color: #fafafa;
  }
  p {
      line-height: 2rem;
  }
  .button-collapse {
-     color: #fff;
+     color: #fafafa;
  }
  .parallax-container {
-     min-height: 380px;
+     min-height: 400px;
      line-height: 0;
      height: auto;
      color: rgba(255, 255, 255, .9);
