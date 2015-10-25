@@ -17,6 +17,7 @@
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/easter.js"></script>
 
 </head>
 
@@ -24,7 +25,8 @@
   <!-- Navbar -->
   <div class="navbar-fixed">
     <nav class="grey darken-4" role="navigation">
-      <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo signature">Mehdi Solati</a>
+      <div class="nav-wrapper container">
+
         <ul class="right hide-on-med-and-down">
           <li><a href="#aboutMe">About Me</a></li>
           <li><a href="#portfolioSkills">Portfolio & Skills</a></li>
@@ -41,103 +43,207 @@
     </nav>
   </div>
 
-  <!-- About Me Banner -->
-<!-- <div id="aboutMe-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br>
-        <h1 class="header center grey-text text-darken-4">Mehdi Solati's Web Portfolio</h1>
+  <!-- About Me -->
+  <div class="container">
+    <div id="aboutMe">
+      <div class="card">
+        <div class="container2">
+          <div class="row">
+            <h3 class="center">Mehdi Solati</h3>
+            <h5 class="center">Web Portfolio</h5>
+          </div>
+          <div class="row">
+            <div class="col s12 m4 l4">
+
+              <img src="./images/profile.png" class="responsive-img circle" alt="Mehdi Profile Image">
+              <p class="center">email @ <a href="mailto:mkslt04@gmail.com" class="pinkLink">mkslt04@gmail.com</a></p>
+              <p class="center">call @ <a href="tel:347-559-7399" class="pinkLink">347.559.7399</a></p>
+
+            </div>
+            <div class="col s12 m8 l8">
+              <p>As a Computer Science major, I have a great deal of passion for technology and software development. My passion is a mix of either programming or familiarizing myself with new products and services. This general passion and interest has allowed me to develop an intricate knowledge of various technologies, including their purpose and how they work. However, while I enjoy their many benefits, I am also able to look at the products with a critical eye. Above and beyond anything though, I am interested in obtaining invaluable experience in the Computer Science field as well as being granted the opportunity to work with some of the best and the brightest.</p>
+            </div>
+
+          </div>
+          <div class="row">
+            <a href="http://facebook.com/mkslt04"><img class="col s2 m2 l2 offset-s1 offset-m1 offset-l1" src="./images/social/facebook.png" alt="Facebook Profile"></a>
+            <a href="http://github.com/MehdiSolati"><img class="col s2 m2 l2" src="./images/social/github.png" alt="Github Profile"></a>
+            <a href="http://google.com/+MehdiSolati"><img class="col s2 m2 l2" src="./images/social/google.png" alt="Google Profile"></a>
+            <a href="http://linkedin.com/in/mehdisolati"><img class="col s2 m2 l2" src="./images/social/linkedin.png" alt="LinkedIn Profile"></a>
+            <a href="http://twitter.com/mkslt04"><img class="col s2 m2 l2" src="./images/social/twitter.png" alt="Twitter Profile"></a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="parallax frostedGlass"><img src="./images/backgrounds/background4.jpeg" alt="Header Image"></div>
-  </div> -->
-
-<!-- About Me -->  
-<div class="container">
-<div id="aboutMe">
-  <div class="card medium">
-    <!-- Card Content -->
-  </div>
-</div>
-</div>
-
-<!-- Portfolio & Skills Banner -->
-<div id="portfolioSkills-banner" class="parallax-container frostedGlass">
-    <div class="parallax"><img src="./images/backgrounds/background5.jpeg" alt="Header Image"></div>
   </div>
 
-<!-- Portfolio & Skills --> 
-<div id="portfolioSkills" class="container">
-  <h3 class="header center grey-text text-darken-4">Portfolio & Skills</h3>
-  <div class="row">
-    <div class="col s12">
-      <ul class="tabs">
-        <li class="tab col s6 m6 l6"><a class="active grey-text text-darken-4" href="#skills">Skills</a></li>
-        <li class="tab col s6 m6 l6"><a class="grey-text text-darken-4" href="#portfolio">Portfolio</a></li>
-      </ul>
-    </div>
-    <div id="portfolio" class="col s12">Bunch Of Stuff</div>
-    <div id="skills" class="row">
+  <!-- Portfolio & Skills Banner -->
+  <div id="portfolioSkills-banner" class="parallax-container frostedGlass">
+    <div class="parallax"><img src="./images/backgrounds/background5.jpeg" alt="Banner Image"></div>
+  </div>
+
+  <!-- Portfolio & Skills -->
+  <div id="portfolioSkills" class="container">
+    <h3 class="header center">Portfolio & Skills</h3>
+    <div class="row">
       <div class="col s12">
-        <div id="angular" class="card col s12 m12 l5">
-          <img src="./images/skills/angular.png" class="skillsLogos" alt="Angular Logo">
+        <ul class="tabs">
+          <li class="tab col s6 m6 l6"><a class="active grey-text text-darken-4" href="#skills">Skills</a></li>
+          <li class="tab col s6 m6 l6"><a class="grey-text text-darken-4" href="#portfolio">Portfolio</a></li>
+        </ul>
+      </div>
+      <!-- Portfolio -->
+      <div id="portfolio" class="col s12">
+        <ul class="collapsible popout" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- Skills -->
+      <div id="skills" class="col s12">
+        <ul class="collapsible " data-collapsible="accordion">
+
+          <li class="collection-item avatar">
+            <div class="collapsible-header">
+              <img src="./images/skills/logo/angular.png" alt="" class="">
+              <span class="title">Angular</span>
+            </div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+
+          <li class="collection-item avatar">
+            <div class="collapsible-header">
+              <img src="./images/skills/logo/git.png" alt="" class="">
+              <span class="title">GIT</span>
+            </div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+
+          <li class="collection-item avatar">
+            <div class="collapsible-header">
+              <img src="./images/skills/logo/java.png" alt="" class="">
+              <span class="title">Java</span>
+            </div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+
+          <li class="collection-item avatar">
+            <div class="collapsible-header">
+              <img src="./images/skills/logo/js.png" alt="" class="">
+              <span class="title">JavaScript</span>
+            </div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+
+          <li class="collection-item avatar">
+            <div class="collapsible-header">
+              <img src="./images/skills/logo/meteor.png" alt="" class="">
+              <span class="title">Meteor</span>
+            </div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+
+          <li class="collection-item avatar">
+            <div class="collapsible-header">
+              <img src="./images/skills/logo/mongo.png" alt="" class="">
+              <span class="title">MongoDB</span>
+            </div>
+            <div class="collapsible-body">
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div id="skills" class="row">
+      <div class="col s12">
+        <div id="angular" class="card small col s12 m12 l5">
+          <img src="./images/skills/angular.png" class="responsive-img skillsLogos" alt="Angular Logo">
+          <h5 class="header center">Angular</h5>
         </div>
-        <div id="git" class="card col s12 m12 l5">
-          <img src="./images/skills/git.png" class="skillsLogos" alt="GIT Logo">
+        <div id="git" class="card small col s12 m12 l5 offset-l2">
+          <img src="./images/skills/git.png" class="responsive-img skillsLogos" alt="GIT Logo">
+          <h5 class="header center">GIT</h5>
         </div>
-        <div id="java" class="card col s12 m12 l5">
-          <img src="./images/skills/java.png" class="skillsLogos" alt="Java Logo">
+        <div id="java" class="card small col s12 m12 l5">
+          <img src="./images/skills/java.png" class="responsive-img skillsLogos" alt="Java Logo">
+          <h5 class="header center">Java</h5>
         </div>
-        <div id="javascript" class="card col s12 m12 l5">
-          <img src="./images/skills/js.png" class="skillsLogos" alt="JavaScript Logo">
+        <div id="javascript" class="card small col s12 m12 l5">
+          <img src="./images/skills/js.png" class="responsive-img skillsLogos" alt="JavaScript Logo">
+          <h5 class="header center">JavaScript</h5>
         </div>
-        <div id="meteor" class="card col s12 m12 l5">
-          <img src="./images/skills/meteor.png" class="skillsLogos" alt="Meteor Logo">
+        <div id="meteor" class="card small col s12 m12 l5">
+          <img src="./images/skills/meteor.png" class="responsive-img skillsLogos" alt="Meteor Logo">
+          <h5 class="header center">Meteor</h5>
         </div>
-        <div id="mongo" class="card col s12 m12 l5">
-          <img src="./images/skills/mongo.png" class="skillsLogos" alt="MongoDB Logo">
+        <div id="mongo" class="card small col s12 m12 l5">
+          <img src="./images/skills/mongo.png" class="responsive-img skillsLogos" alt="MongoDB Logo">
+          <h5 class="header center">MongoDB</h5>
         </div>
         </div>
+    </div> -->
     </div>
   </div>
-</div>
 
-
-<!-- Experience & Education Banner -->
-<div id="experiencEducation-banner" class="parallax-container frostedGlass">
-    <div class="parallax"><img src="./images/backgrounds/background6.jpeg" alt="Header Image"></div>
+  <!-- Experience & Education Banner -->
+  <div id="experiencEducation-banner" class="parallax-container frostedGlass">
+    <div class="parallax"><img src="./images/backgrounds/background6.jpeg" alt="Banner Image"></div>
   </div>
 
-<!-- Experience & Education -->
-<div class="container"> 
-<div id="experienceEducation">
-  <h3 class="header center grey-text text-darken-4">Experience & Education</h3>
-  <div class="card medium">
-    <!-- Card Content -->
+  <!-- Experience & Education -->
+  <div class="container">
+    <div id="experienceEducation">
+      <h3 class="header center">Experience & Education</h3>
+      <div class="card medium">
+        <!-- Card Content -->
+      </div>
+    </div>
   </div>
-  </div>
-</div>
-
 
 </body>
 
 <footer class="page-footer grey darken-4" id="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col s12 m12 l12">
-                <h6>Connect & Stay Up To Date</h6>
-              </div>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m12 l12">
+        <h6>Connect & Stay Up To Date</h6>
+      </div>
 
-            </div>
-                        
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2015 Mehdi Solati
-            </div>
-          </div>
-        </footer>
+    </div>
+
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      <a onclick="nomify()">© 2015 Mehdi Solati</a>
+    </div>
+  </div>
+</footer>
 
 </html>
-
-
