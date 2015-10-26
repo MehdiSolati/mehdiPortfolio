@@ -1,124 +1,111 @@
- body {
+body {
     background-color: #fcfcfc;
     font-size: 14px;
     font-family: "Roboto";
     color: #212121;
- }
- .small {
-     font-size: 10.5px;
-     /* 75% of the baseline */
- }
- .large {
-     font-size: 17.5px;
-     /* 125% of the baseline */
- }
- .sideScroll {
-     max-width: 100%;
-     overflow: auto;
-     height: 450px;
-     white-space: nowrap;
- }
- .contents {
-     width: 600px;
-     height: 400px;
-     display: inline-block;
- }
- .frostedGlass {
+}
+.small {
+    font-size: 10.5px;
+    /* 75% of the baseline */
+}
+.large {
+    font-size: 17.5px;
+    /* 125% of the baseline */
+}
+.sideScroll {
+    max-width: 100%;
+    overflow: auto;
+    height: 450px;
+    white-space: nowrap;
+}
+.contents {
+    width: 600px;
+    height: 400px;
+    display: inline-block;
+}
+.frostedGlass {
     -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
- }
- .frostedGlass:hover {
-    -webkit-filter: blur(0);
-  -moz-filter: blur(0);
-  -o-filter: blur(0);
-  -ms-filter: blur(0);
-  filter: blur(0);
- }
-
- .sideScroll {
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    color: transparent;
+}
+.frostedGlass:hover {
+    -webkit-filter: blur();
+    -moz-filter: blur();
+    -o-filter: blur();
+    -ms-filter: blur();
+    filter: blur();
+    color: black;
+}
+.sideScroll {
     max-width: 100%;
     overflow: auto;
     height: 430px;
     white-space: nowrap;
 }
-
-.sideScrollContent {
-    width: 600px;
-    height: 400px;
-    display: inline-block;
-}
-
 .skillsLogos {
     max-height: 200px;
     max-width: 550px;
 }
-.skillsLogosBullet {
-    max-height: 20px;
+.skillsLogosBullet { max-height: 20px }
+nav ul a,
+nav .brand-logo { color: #fcfcfc }
+a { color: #fcfcfc }
+p { line-height: 2rem }
+.button-collapse { color: #fcfcfc }
+.parallax-container {
+    min-height: 400px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
 }
- nav ul a,
- nav .brand-logo {
-     color: #fcfcfc;
- }
- a {
-     color: #fcfcfc;
- }
- p {
-     line-height: 2rem;
- }
- .button-collapse {
-     color: #fcfcfc;
- }
- .parallax-container {
-     min-height: 400px;
-     line-height: 0;
-     height: auto;
-     color: rgba(255, 255, 255, .9);
- }
- .parallax-container .section {
-     width: 100%;
- }
- @media only screen and (max-width: 992px) {
-     .parallax-container .section {
-         position: absolute;
-         top: 40%;
-     }
-     #index-banner .section {
-         top: 10%;
-     }
- }
- @media only screen and (max-width: 600px) {
-     #index-banner .section {
-         top: 0;
-     }
- }
- .icon-block {
-     padding: 0 15px;
- }
- .icon-block .material-icons {
-     font-size: inherit;
- }
- footer.page-footer {
-     margin: 0;
- }
- h3 {
+.parallax-container .section { width: 100% }
+@media only screen and (max-width: 992px) { 
+    .parallax-container .section {
+        position: absolute;
+        top: 40%;
+    }
+    #index-banner .section { top: 10% }
+}
+@media only screen and (max-width: 600px) { 
+    #index-banner .section { top: 0 }
+}
+.icon-block { padding: 0 15px }
+.icon-block .material-icons { font-size: inherit }
+footer.page-footer { margin: 0 }
+h3 {
     border-bottom: solid;
     border-color: #f6b2b5;
- }
-a.pinkLink {
-    color: #f6b2b5;
 }
+a.pinkLink { color: #f6b2b5 }
 .container2 {
-  margin: 0 auto;
-  max-width: 1280px;
-  width: 95%; }
-
-@media only screen and (min-width : 601px) {
-  .container2 {
-    width: 95%; } }
-
-@media only screen and (min-width : 993px) {
-  .container2 {
-    width: 95%; } }
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 95%;
+}
+@media only screen and (min-width:601px) { 
+    .container2 { width: 95% }
+}
+@media only screen and (min-width:993px) { 
+    .container2 { width: 95% }
+}
+.bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.noBorder {
+    border: 0px solid #e0e0e0;
+    border-radius: 0px;
+    border-bottom: 0px solid #ddd; 
+}
+.topSpace {
+   padding-top: 6px;
+}
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
