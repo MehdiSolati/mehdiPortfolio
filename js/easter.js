@@ -1,10 +1,10 @@
-function nomify() {
+function doge() {
 	var shapes = {
-			"w_rect": ["tumblr_mohxt1V6a91svhqpoo1_500.gif", "tumblr_md0q05wMJb1rxis0k.gif", "tumblr_ml0nmjWpX41snjjivo1_500.gif", "CastDance_322x183.gif", "CookieDawn_322x183.gif", "Painting_322x183.gif"],
-			"t_rect": ["CookieMonster-Sitting.jpg", "487961_10150955894571587_1215263686_n.jpg", "534767_10151516100086587_1790492047_n.jpg", "Static.jpg"],
-			"square": ["cookie_monster.jpg", "935823_10151502554911587_1547641144_n.jpg", "902502_10151355606796587_45192127_o.jpg", "cookie-monster.jpg", "Cookie_250x250.gif"]
+			"w_rect": ["dogeDough.jpg", "wizardOfDoge.gif", "dogeDance.gif", "dogeCoin.gif", "batDoge.gif", "coldDoge.gif"],
+			"t_rect": ["dogeDonut.jpg", "dogeSelfie.jpg", "dogeSnap.jpg", "dogeGuard.jpg"],
+			"square": ["dogeIntensifies.gif", "dogeWords.jpg", "dogeEatDoge.jpg", "dogeTrump.jpg", "dogeShakeSpace.gif"]
 		},
-		img_path = "http://downloads.cdn.sesame.org/sw/OmNomNomify/";
+		img_path = "http://www.mehdisolati.com/images/doge/";
 
 	function chooseImg(shape) {
 		return img_path + shapes[shape][Math.floor(Math.random() * shapes[shape].length)]
