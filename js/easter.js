@@ -2,7 +2,7 @@ function doge() {
 	var shapes = {
 			"w_rect": ["dogeDough.jpg", "wizardOfDoge.gif", "dogeDance.gif", "dogeCoin.gif", "batDoge.gif", "coldDoge.gif"],
 			"t_rect": ["dogeDonut.jpg", "dogeSelfie.jpg", "dogeSnap.jpg", "dogeGuard.jpg"],
-			"square": ["dogeIntensifies.gif", "dogeWords.jpg", "dogeEatDoge.jpg", "dogeTrump.jpg", "dogeShakeSpace.gif"]
+			"square": ["dogeSwim.gif", "dogeIntensifies.gif", "dogeWords.jpg", "dogeEatDoge.jpg", "dogeTrump.jpg", "dogeShakeSpace.gif"]
 		},
 		img_path = "http://www.mehdisolati.com/images/doge/";
 
