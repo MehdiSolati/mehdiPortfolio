@@ -11,8 +11,8 @@
 
   <!-- CSS -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" />
+  <link href="css/style.css" type="text/css" rel="stylesheet" />
   <!-- JavaScript -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/materialize.min.js"></script>
@@ -39,18 +39,18 @@
 <body>
   <!-- Navbar -->
   <div class="navbar">
-    <nav class="grey darken-4" role="navigation">
+    <nav class="grey darken-4">
       <div class="nav-wrapper container">
 
         <ul class="right hide-on-med-and-down">
           <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="#skillsPortfolio">Skills & Portfolio</a></li>
+          <li><a href="#portfolioSkills">Portfolio & Skills</a></li>
           <li><a href="#experienceEducation">Experience & Education</a></li>
           <!-- <li><a class="modal-trigger waves-effect waves-light" href="#contact">Contact</a></li> -->
         </ul>
         <ul id="nav-mobile" class="side-nav">
           <li><a href="#aboutMe">About Me</a></li>
-          <li><a href="#skillsPortfolio">Skills & Portfolio</a></li>
+          <li><a href="#portfolioSkills">Portfolio & Skills</a></li>
           <li><a href="#experienceEducation">Experience & Education</a></li>
           <!-- <li><a class="modal-trigger waves-effect waves-light" href="#contact">Contact</a></li> -->
 
@@ -62,16 +62,15 @@
   <div class="container">
     <div id="aboutMe">
       <h3 class="center">Mehdi Solati</h3>
-      <h5 class="center">Web Portfolio</h5>
-      <div class="card">
+      <h5 class="center" id="punchLine">// A pirate trying to write epic code!</h5>
+      <div class="card hoverable">
         <div class="container2">
-          </br>
-          <div class="row">
+          <div class="row topSpace">
             <div class="col s12 m4 l4">
 
               <img src="./images/profile.png" class="responsive-img circle" alt="Mehdi Profile Image">
-              <p class="center">email @ <a href="mailto:mkslt04@gmail.com" class="pinkLink">mkslt04@gmail.com</a></p>
-              <p class="center">call @ <a href="tel:347-559-7399" class="pinkLink">347.559.7399</a></p>
+              <p class="center">email @ <a href="mailto:mkslt04@gmail.com">mkslt04@gmail.com</a></p>
+              <p class="center">call @ <a href="tel:347-559-7399">347.559.7399</a></p>
 
             </div>
             <div class="col s12 m8 l8">
@@ -80,7 +79,7 @@
 
           </div>
           <div class="row">
-            <a href="http://facebook.com/mkslt04"><img class="col s4 m2 l2" topSpace src="./images/social/facebook.png" alt="Facebook Profile"></a>
+            <a href="http://facebook.com/mkslt04"><img class="col s4 m2 l2 topSpace" src="./images/social/facebook.png" alt="Facebook Profile"></a>
             <a href="http://github.com/MehdiSolati"><img class="col s4 m2 l2 topSpace" src="./images/social/github.png" alt="Github Profile"></a>
             <a href="http://google.com/+MehdiSolati"><img class="col s4 m2 l2 topSpace" src="./images/social/google.png" alt="Google Profile"></a>
             <a href="http://linkedin.com/in/mehdisolati"><img class="col s4 m2 l2 topSpace" src="./images/social/linkedin.png" alt="LinkedIn Profile"></a>
@@ -92,113 +91,117 @@
     </div>
   </div>
 
-  <!-- Skills & Portfolio Banner -->
-  <div id="skillsPortfolio-banner" class="parallax-container frostedGlass">
+  <!--  Portfolio & Skills Banner -->
+  <div id="portfolioSkills-banner" class="parallax-container frostedGlass">
     <div class="parallax"><img src="./images/backgrounds/background5.jpeg" alt="Banner Image"></div>
   </div>
 
-  <!-- Skills & Portfolio -->
-  <div id="skillsPortfolio" class="container">
-    <h3 class="header center">Skills & Portfolio</h3>
-    <div class="card">
+  <!-- Portfolio & Skills -->
+  <div id="portfolioSkills" class="container">
+    <h3 class="header center">Portfolio & Skills</h3>
 
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs hoverable">
+          <li class="tab col s6 m6 l6"><a class="active grey-text text-darken-4" href="#portfolio">Portfolio</a></li>
+          <li class="tab col s6 m6 l6"><a class="grey-text text-darken-4" href="#skills">Skills</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Portfolio -->
+    <div id="portfolio">
       <div class="row">
-        <div class="col s12">
-          <ul class="tabs">
-            <li class="tab col s6 m6 l6"><a class="active grey-text text-darken-4" href="#skills">Skills</a></li>
-            <li class="tab col s6 m6 l6"><a class="grey-text text-darken-4" href="#portfolio">Portfolio</a></li>
-          </ul>
+        <div class="col s12 m6 l6">
+          <div class="card hoverable">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="./images/portfolio/ballmerpeak.png" alt="Ballmer Peak Web App">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Ballmer Peak<i class="material-icons right">more_vert</i></span>
+              <p><a href="http://ballmerpeak.meteor.com">Visit</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Ballmer Peak<i class="material-icons right">close</i></span>
+              <p>A Meteor web app designed to calculate a programmer's BAC and determine if their BAC falls into the legendary "Ballmer Peak" in order for them to reach optimal coding.
+              </p>
+              <p><a href="http://ballmerpeak.meteor.com">Deployed Website</a></p>
+              <p><a href="http://github.com/MehdiSolati/Ballmer-Peak">GitHub</a></p>
+            </div>
+          </div>
         </div>
-        <!-- Skills -->
-        <div id="skills" class="col s12">
-          <ul class="collapsible z-depth-0 noBorder" data-collapsible="accordion">
+      </div>
+    </div>
 
-            <li class="collection-item avatar">
-              <div class="collapsible-header topSpace">
-                <a href="http://angularjs.org"><img src="./images/skills/logo/angular.png" alt="AngularJS Logo"></a>
-                <span class="title">AngularJS</span>
-              </div>
-              <div class="collapsible-body">
-                <p>AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.</p>
-              </div>
-            </li>
+    <!-- Skills -->
+    <div id="skills">
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card hoverable">
+            <ul class="collapsible z-depth-0 noBorder" data-collapsible="accordion">
 
-            <li class="collection-item avatar">
-              <div class="collapsible-header topSpace">
-                <a href="http://git-scm.com"><img src="./images/skills/logo/git.png" alt="GIT Logo"></a>
-                <span class="title">GIT</span>
-              </div>
-              <div class="collapsible-body">
-                <p>Git is a widely used version control system for software development. It is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows. Git was initially designed and developed by Linus Torvalds for Linux kernel development in 2005.</p>
-              </div>
-            </li>
+              <li class="collection-item avatar">
+                <div class="collapsible-header topSpace">
+                  <a href="http://angularjs.org"><img src="./images/skills/logo/angular.png" alt="AngularJS Logo"></a>
+                  <span class="title">AngularJS</span>
+                </div>
+                <div class="collapsible-body">
+                  <p>AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.</p>
+                </div>
+              </li>
 
-            <li class="collection-item avatar">
-              <div class="collapsible-header topSpace">
-                <a href="http://java.com/"><img src="./images/skills/logo/java.png" alt="Java Logo"></a>
-                <span class="title">Java</span>
-              </div>
-              <div class="collapsible-body">
-                <p>Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture.</p>
-              </div>
-            </li>
+              <li class="collection-item avatar">
+                <div class="collapsible-header topSpace">
+                  <a href="http://git-scm.com"><img src="./images/skills/logo/git.png" alt="GIT Logo"></a>
+                  <span class="title">GIT</span>
+                </div>
+                <div class="collapsible-body">
+                  <p>Git is a widely used version control system for software development. It is a distributed revision control system with an emphasis on speed, data integrity, and support for distributed, non-linear workflows. Git was initially designed and developed by Linus Torvalds for Linux kernel development in 2005.</p>
+                </div>
+              </li>
 
-            <li class="collection-item avatar">
-              <div class="collapsible-header topSpace">
-                <a href="http://javascript.com"><img src="./images/skills/logo/js.png" alt="JavaScript Logo"></a>
-                <span class="title">JavaScript</span>
-              </div>
-              <div class="collapsible-body">
-                <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them. JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects.</p>
-              </div>
-            </li>
+              <li class="collection-item avatar">
+                <div class="collapsible-header topSpace">
+                  <a href="http://java.com/"><img src="./images/skills/logo/java.png" alt="Java Logo"></a>
+                  <span class="title">Java</span>
+                </div>
+                <div class="collapsible-body">
+                  <p>Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented, and specifically designed to have as few implementation dependencies as possible. It is intended to let application developers "write once, run anywhere" (WORA), meaning that compiled Java code can run on all platforms that support Java without the need for recompilation. Java applications are typically compiled to bytecode that can run on any Java virtual machine (JVM) regardless of computer architecture.</p>
+                </div>
+              </li>
 
-            <li class="collection-item avatar">
-              <div class="collapsible-header topSpace">
-                <a href="http://meteor.com/"><img src="./images/skills/logo/meteor.png" alt="Meteor Logo"></a>
-                <span class="title">Meteor</span>
-              </div>
-              <div class="collapsible-body">
-                <p>Meteor, or MeteorJS is an open-source JavaScript web application framework written using Node.js. Meteor allows for rapid prototyping and produces cross-platform (web, Android, iOS) code. It integrates with MongoDB and uses the Distributed Data Protocol and a publish–subscribe pattern to automatically propagate data changes to clients without requiring the developer to write any synchronization code. On the client, Meteor depends on jQuery and can be used with any JavaScript UI widget library.</p>
-              </div>
-            </li>
+              <li class="collection-item avatar">
+                <div class="collapsible-header topSpace">
+                  <a href="http://javascript.com"><img src="./images/skills/logo/js.png" alt="JavaScript Logo"></a>
+                  <span class="title">JavaScript</span>
+                </div>
+                <div class="collapsible-body">
+                  <p>JavaScript is a cross-platform, object-oriented scripting language. It is a small and lightweight language. Inside a host environment (for example, a web browser), JavaScript can be connected to the objects of its environment to provide programmatic control over them. JavaScript contains a standard library of objects, such as Array, Date, and Math, and a core set of language elements such as operators, control structures, and statements. Core JavaScript can be extended for a variety of purposes by supplementing it with additional objects.</p>
+                </div>
+              </li>
 
-            <li class="collection-item avatar">
-              <div class="collapsible-header topSpace">
-                <a href="http://mongodb.org/"><img src="./images/skills/logo/mongo.png" alt="MongoDB Logo"></a>
-                <span class="title">MongoDB</span>
-              </div>
-              <div class="collapsible-body">
-                <p>MongoDB (from humongous) is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.</p>
-              </div>
-            </li>
-          </ul>
-          <h6 class="center">Click Skill For Details</h6>
-        </div>
-        <!-- Portfolio -->
-        <div id="portfolio" class="col s12">
-          <!-- <ul class="collapsible z-depth-0 noBorder" data-collapsible="accordion">
+              <li class="collection-item avatar">
+                <div class="collapsible-header topSpace">
+                  <a href="http://meteor.com/"><img src="./images/skills/logo/meteor.png" alt="Meteor Logo"></a>
+                  <span class="title">Meteor</span>
+                </div>
+                <div class="collapsible-body">
+                  <p>Meteor, or MeteorJS is an open-source JavaScript web application framework written using Node.js. Meteor allows for rapid prototyping and produces cross-platform (web, Android, iOS) code. It integrates with MongoDB and uses the Distributed Data Protocol and a publish–subscribe pattern to automatically propagate data changes to clients without requiring the developer to write any synchronization code. On the client, Meteor depends on jQuery and can be used with any JavaScript UI widget library.</p>
+                </div>
+              </li>
 
-          <li class="collection-item avatar">
-            <div class="collapsible-header topSpace">
-              <a href="http://angularjs.org"><img src="./images/skills/logo/angular.png" alt="AngularJS Logo"></a>
-              <span class="title">AngularJS</span>
-            </div>
-            <div class="collapsible-body">
-              <p>AngularJS is a structural framework for dynamic web apps. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly. Angular's data binding and dependency injection eliminate much of the code you would otherwise have to write. And it all happens within the browser, making it an ideal partner with any server technology.</p>
-            </div>
-          </li>
-          <li class="collection-item avatar">
-            <div class="collapsible-header topSpace">
-              <a href="http://mongodb.org/"><img src="./images/skills/logo/mongo.png" alt="MongoDB Logo"></a>
-              <span class="title">MongoDB</span>
-            </div>
-            <div class="collapsible-body">
-              <p>MongoDB (from humongous) is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.</p>
-            </div>
-          </li>
-        </ul> -->
-          <h6 class="center">Nothing Yet, Check Back Soon!</h6>
+              <li class="collection-item avatar">
+                <div class="collapsible-header topSpace">
+                  <a href="http://mongodb.org/"><img src="./images/skills/logo/mongo.png" alt="MongoDB Logo"></a>
+                  <span class="title">MongoDB</span>
+                </div>
+                <div class="collapsible-body">
+                  <p>MongoDB (from humongous) is a cross-platform document-oriented database. Classified as a NoSQL database, MongoDB eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas (MongoDB calls the format BSON), making the integration of data in certain types of applications easier and faster. Released under a combination of the GNU Affero General Public License and the Apache License, MongoDB is free and open-source software.</p>
+                </div>
+              </li>
+            </ul>
+            <h6 class="center">Click Skill For Details</h6>
+          </div>
+
         </div>
       </div>
     </div>
@@ -208,7 +211,6 @@
   <div id="experiencEducation-banner" class="parallax-container frostedGlass">
     <div class="parallax"><img src="./images/backgrounds/background6.jpeg" alt="Banner Image"></div>
     <div class="row bottom">
-      <h5 class="header col s12 light frostedGlass"></h5>
     </div>
   </div>
 
@@ -217,7 +219,7 @@
     <div id="experienceEducation">
       <h3 class="header center">Experience & Education</h3>
 
-      <div class="card">
+      <div class="card hoverable">
         <div class="col s12">
           <ul class="tabs">
             <li class="tab col s6 m6 l6"><a class="active grey-text text-darken-4" href="#experience">Experience</a></li>
@@ -233,7 +235,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">Senior Apprentice</h4>
-                <h5 class="center"><a class="pinkLink" href="http://indie-soft.com/a100/">Independent Software</a></h5>
+                <h5 class="center"><a href="http://indie-soft.com/a100/">Independent Software</a></h5>
                 <h6 class="center">September 2015 – Present | New Haven, CT</h6>
                 <p class="center">Assist in hosting weekly developer meet ups. Provide support and tutoring for software development to new developers. Assist in the formal training of apprentice software developers, via the Apprentice 100 program, in Full Stack development in an Agile environment.</p>
               </div>
@@ -245,7 +247,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">Nexus Product Forum Top Contributor (Volunteer)</h4>
-                <h5 class="center"><a class="pinkLink" href="http://productforums.google.com/forum/#!forum/nexus">Google</a></h5>
+                <h5 class="center"><a href="http://productforums.google.com/forum/#!forum/nexus">Google</a></h5>
                 <h6 class="center">June 2011 – Present</h6>
                 <p class="center">Actively participate in Google’s Product Help Forums. Work with the Mobile team of Google Consumer Operations branch while addressing consumer questions, providing support for Google’s various mobile products and services, and reporting/escalating bugs with the Android platform, Nexus devices, and some Google services available on Android.</p>
               </div>
@@ -257,7 +259,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">Retail Sales Associate</h4>
-                <h5 class="center"><a class="pinkLink" href="http://t-mobile.com/">T-Mobile</a></h5>
+                <h5 class="center"><a href="http://t-mobile.com/">T-Mobile</a></h5>
                 <h6 class="center">July 2012 – October 2015 | Meriden, CT</h6>
                 <p class="center">Attended to the customer and develop customer trust and loyalty not only through sales, but also by solving their problems, attending to their needs, and treating them with utmost respect. Consistently made goals for measured metrics, as well as receiving recognition in the market for some metrics. Stayed knowledgeable and up-to-date with all products and services in order to assist customers in finding a perfect solution.</p>
               </div>
@@ -269,7 +271,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">A100 Program Apprentice</h4>
-                <h5 class="center"><a class="pinkLink" href="http://indie-soft.com/a100/">Independent Software</a></h5>
+                <h5 class="center"><a href="http://indie-soft.com/a100/">Independent Software</a></h5>
                 <h6 class="center">June 2015 – August 2015 | Stamford, CT</h6>
                 <p class="center">Received formal training in agile practices as well as modern coding technologies; such as Git, Meteor, Javascript, CSS, HTML5, and MongoDB. Served as Scrum Master for an agile development team using Meteor JS, for the Full Stack, building beta software for a venture company.</p>
               </div>
@@ -281,7 +283,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">Head Swim Coach (Blue Marlins of Greater New Haven)</h4>
-                <h5 class="center"><a class="pinkLink" href="http://jccnh.org/">Jewish Community Center of Greater New Haven</a></h5>
+                <h5 class="center"><a href="http://jccnh.org/">Jewish Community Center of Greater New Haven</a></h5>
                 <h6 class="center">September 2009 – March 2015 | Woodbridge, CT</h6>
                 <p class="center">Organized training cycles with effective workouts, provided coaching and support, and taught swimmers valuable skills to practice both inside, and outside of the water; while also developing my own knowledge of coaching and the sport. Also managed a well balanced coaching staff, with focuses in communication and teaching amongst each other. Opened up new lines of effective communication with parents and administrative heads. Set up activities such as team spirit nights, and events with Olympic Athletes.</p>
               </div>
@@ -293,7 +295,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">MIS Intern</h4>
-                <h5 class="center"><a class="pinkLink" href="http://cityofmeriden.org/">City of Meriden</a></h5>
+                <h5 class="center"><a href="http://cityofmeriden.org/">City of Meriden</a></h5>
                 <h6 class="center">June 2012 – September 2012 | Meriden, CT</h6>
                 <p class="center">Used basic knowledge and skills obtained through education and on-the-job training to assist MIS (IT) team. Responsibilities include troubleshooting, software roll out, system maintenance, and assisting with transitions to new technologies used within our institution.</p>
               </div>
@@ -308,7 +310,7 @@
               </div>
               <div class="col s12 m9 l8">
                 <h4 class="center">Bachelor of Science (B.S.), Computer Science</h4>
-                <h5 class="center"><a class="pinkLink" href="http://southernct.edu/">Southern Connecticut State University</a></h5>
+                <h5 class="center"><a href="http://southernct.edu/">Southern Connecticut State University</a></h5>
                 <h6 class="center">January 2012 – Present | New Haven, CT</h6>
                 <p class="center">Computer Science Major while also pursuing a Mathematics Minor.</p>
               </div>
@@ -332,11 +334,18 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-        <a onclick="doge()">© 2015 Mehdi Solati</a>
+        <a onclick="doge()" class="white-text">© 2015 Mehdi Solati</a>
       </div>
     </div>
   </footer>
-
+  <script type="text/javascript">
+    function punchLine() {
+      var punchLine = ["// A pirate trying to write epic code!", "Cirrus, alto cumulus, cirrostratus. Yea, I speak cloud. No biggie.", "Java is a language... Not a hot drink!"];
+      var quote = punchLine[Math.floor(Math.random() * punchLine.length)];
+      $("#punchLine").text(quote);
+    }
+    window.onLoad = punchLine();
+  </script>
 </body>
 
 </html>

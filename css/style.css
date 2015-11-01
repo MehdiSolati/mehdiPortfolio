@@ -79,7 +79,7 @@ h3 {
     border-bottom: solid;
     border-color: #f6b2b5;
 }
-a.pinkLink { color: #f6b2b5 }
+a { color: #f6b2b5 }
 .container2 {
     margin: 0 auto;
     max-width: 1280px;
