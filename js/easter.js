@@ -21,5 +21,8 @@ function doge() {
 		img.setAttribute("width", w);
 		img.src = chooseImg(s)
 	};
+
+	
+	$(profilePic).attr("src", "http://www.mehdisolati.com/images/doge/profile.jpg");
 	return void 0;
 }
