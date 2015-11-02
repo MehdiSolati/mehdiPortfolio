@@ -4,7 +4,7 @@ function doge() {
 			"t_rect": ["dogeDonut.jpg", "dogeSelfie.jpg", "dogeSnap.jpg", "dogeGuard.jpg"],
 			"square": ["dogeSwim.gif", "dogeIntensifies.gif", "dogeWords.jpg", "dogeEatDoge.jpg", "dogeTrump.jpg", "dogeShakeSpace.gif"]
 		},
-		img_path = "http://www.mehdisolati.com/images/doge/";
+		img_path = "http://www.michaelsolati.com/images/doge/";
 
 	function chooseImg(shape) {
 		return img_path + shapes[shape][Math.floor(Math.random() * shapes[shape].length)]
@@ -23,6 +23,6 @@ function doge() {
 	};
 
 	
-	$(profilePic).attr("src", "http://www.mehdisolati.com/images/doge/profile.jpg");
+	$(profilePic).attr("src", "http://www.michaelsolati.com/images/doge/profile.jpg");
 	return void 0;
 }
