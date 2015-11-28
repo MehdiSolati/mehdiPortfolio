@@ -24,21 +24,21 @@ body {
     display: inline-block;
 }
 .frostedGlass {
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
     color: transparent;
 }
-.frostedGlass:hover {
+/*.frostedGlass:hover {
     -webkit-filter: blur();
     -moz-filter: blur();
     -o-filter: blur();
     -ms-filter: blur();
     filter: blur();
     color: black;
-}
+}*/
 .sideScroll {
     max-width: 100%;
     overflow: auto;
@@ -62,14 +62,14 @@ p { line-height: 2rem }
     color: rgba(255, 255, 255, .9);
 }
 .parallax-container .section { width: 100% }
-@media only screen and (max-width: 992px) { 
+@media only screen and (max-width: 992px) {
     .parallax-container .section {
         position: absolute;
         top: 40%;
     }
     #index-banner .section { top: 10% }
 }
-@media only screen and (max-width: 600px) { 
+@media only screen and (max-width: 600px) {
     #index-banner .section { top: 0 }
 }
 .icon-block { padding: 0 15px }
@@ -85,10 +85,10 @@ a { color: #f6b2b5 }
     max-width: 1280px;
     width: 95%;
 }
-@media only screen and (min-width:601px) { 
+@media only screen and (min-width:601px) {
     .container2 { width: 95% }
 }
-@media only screen and (min-width:993px) { 
+@media only screen and (min-width:993px) {
     .container2 { width: 95% }
 }
 .bottom {
@@ -99,7 +99,7 @@ a { color: #f6b2b5 }
 .noBorder {
     border: 0px solid #e0e0e0;
     border-radius: 0px;
-    border-bottom: 0px solid #ddd; 
+    border-bottom: 0px solid #ddd;
 }
 .topSpace {
    padding-top: 6px;

@@ -1,6 +1,6 @@
 function doge() {
 	var shapes = {
-			"w_rect": ["dogeDough.jpg", "wizardOfDoge.gif", "dogeDance.gif", "dogeCoin.gif", "batDoge.gif", "coldDoge.gif"],
+			"w_rect": ["dogeDough.jpg", "wizardOfDoge.gif", "dogeDance.gif", "dogeCoin.gif", "batDoge.gif", "coldDoge.gif", "firefox.gif", "windoge.jpg"],
 			"t_rect": ["dogeDonut.jpg", "dogeSelfie.jpg", "dogeSnap.jpg", "dogeGuard.jpg"],
 			"square": ["dogeSwim.gif", "dogeIntensifies.gif", "dogeWords.jpg", "dogeEatDoge.jpg", "dogeTrump.jpg", "dogeShakeSpace.gif"]
 		},
