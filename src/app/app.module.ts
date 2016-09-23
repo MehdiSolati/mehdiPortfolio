@@ -9,7 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioSkillsComponent } from './portfolio-skills/portfolio-skills.component';
-import { ExperienceEducationCommunityComponent } from './experience-education-community/experience-education-community.component';
+import { ExperienceComponent } from './experience/experience.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailListItemComponent } from './detail-list-item/detail-list-item.component';
 
@@ -19,7 +19,7 @@ import { DetailListItemComponent } from './detail-list-item/detail-list-item.com
         NavbarComponent,
         AboutMeComponent,
         PortfolioSkillsComponent,
-        ExperienceEducationCommunityComponent,
+        ExperienceComponent,
         FooterComponent,
         DetailListItemComponent
     ],

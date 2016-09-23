@@ -1,0 +1,12 @@
+<div id="experience">
+    <h3 class="header center">Experience, Community &amp; Education</h3>
+    <div id="work" class="container-fluid">
+        <app-detail-list-item *ngFor="let experience of workExperiences" [detail]="experience"></app-detail-list-item>
+    </div>
+    <div id="community">
+        <app-detail-list-item *ngFor="let experience of communityExperiences" [detail]="experience"></app-detail-list-item>
+    </div>
+    <div id="education">
+        <app-detail-list-item *ngFor="let experience of educationExperiences" [detail]="experience"></app-detail-list-item>
+    </div>
+</div>
