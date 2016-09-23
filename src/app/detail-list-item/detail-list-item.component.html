@@ -1,10 +1,10 @@
 <div class="row center">
-    <div class="col-sm-12 col-md-3 col-lg-4">
+    <div class="col-xs-12 col-md-3 col-lg-4">
         <a href="{{detail.website}}">
-            <img class="responsive" src="{{detail.logo}}" alt="{{detail.orginization}} Logo">
+            <img class="responsive center" src="{{detail.logo}}" alt="{{detail.orginization}} Logo">
         </a>
     </div>
-    <div class="col-sm-12 col-md-9 col-lg-8">
+    <div class="col-xs-12 col-md-9 col-lg-8">
         <h4>{{detail.role}}</h4>
         <h5><a href="{{detail.website}}" target="_blank">{{detail.orginization}}</a></h5>
         <h6>{{detail.dates.start | date:'MMMM y'}} – <span *ngIf="detail.dates.end">{{detail.dates.end | date:'MMMM y'}}</span><span *ngIf="!detail.dates.end">Current</span> | {{detail.location}}</h6>
