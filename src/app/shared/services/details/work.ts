@@ -3,7 +3,7 @@ export const workExperience: Array<Object> = [
         'role': 'Project Manager',
         'orginization': 'Checkmate Creations',
         'logo': 'assets/images/employers/checkmate.png',
-        'website': 'https://checkmatecreations.com',
+        'website': 'https://www.checkmatecreations.com',
         'dates': {
             'start': '2016-02-01T05:00:00.000Z',
             'end': null
