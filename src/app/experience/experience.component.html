@@ -1,13 +1,12 @@
 <section id="experience" class="center-text">
     <h3>Experience, Community &amp; Education</h3>
-    <div class="mdl-card">
-        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-            <div class="mdl-tabs__tab-bar">
-                <a href="#work-experience" class="mdl-tabs__tab is-active">Work</a>
-                <a href="#community-experience" class="mdl-tabs__tab">Community</a>
-                <a href="#education-experience" class="mdl-tabs__tab">Education</a>
-            </div>
-
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            <a href="#work-experience" class="mdl-tabs__tab is-active">Work</a>
+            <a href="#community-experience" class="mdl-tabs__tab">Community</a>
+            <a href="#education-experience" class="mdl-tabs__tab">Education</a>
+        </div>
+        <div class="mdl-card">
             <div class="mdl-tabs__panel is-active" id="work-experience">
                 <app-detail-list-item *ngFor="let experience of workExperiences" [detail]="experience"></app-detail-list-item>
             </div>

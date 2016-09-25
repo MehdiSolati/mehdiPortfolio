@@ -12,6 +12,7 @@ import { PortfolioSkillsComponent } from './portfolio-skills/portfolio-skills.co
 import { ExperienceComponent } from './experience/experience.component';
 import { FooterComponent } from './footer/footer.component';
 import { DetailListItemComponent } from './detail-list-item/detail-list-item.component';
+import { SkillListItemComponent } from './skill-list-item/skill-list-item.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { DetailListItemComponent } from './detail-list-item/detail-list-item.com
         PortfolioSkillsComponent,
         ExperienceComponent,
         FooterComponent,
-        DetailListItemComponent
+        DetailListItemComponent,
+        SkillListItemComponent
     ],
     imports: [
         BrowserModule,

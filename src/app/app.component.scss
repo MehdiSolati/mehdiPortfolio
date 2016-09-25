@@ -1,0 +1,47 @@
+body {
+    background-color: #ebeef0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    &.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.circle {
+        border-radius: 50%;
+    }
+
+    &.responsive {
+        max-width: 100%;
+    }
+}
+
+.center-text {
+    text-align: center;
+}
+
+.mdl-card {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 32px;
+    width: calc(100% - 32px);
+    max-width: 1080px;
+}
+
+.mdl-tabs__tab-bar {
+    margin-bottom: -24px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: calc(100% - 32px);
+    max-width: 1080px;
+}

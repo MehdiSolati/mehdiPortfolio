@@ -16,6 +16,7 @@ export class ExperienceComponent implements OnInit, OnDestroy {
     private educationSub: Subscription;
     private workExperiences: Array<Experience> = [];
     private workSub: Subscription;
+
     constructor(private detailsService: DetailsService) {
 
     }
@@ -37,5 +38,4 @@ export class ExperienceComponent implements OnInit, OnDestroy {
         this.educationSub.unsubscribe();
         this.workSub.unsubscribe();
     }
-
 }
