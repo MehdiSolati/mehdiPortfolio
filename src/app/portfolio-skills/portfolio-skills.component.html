@@ -2,18 +2,20 @@
     <h3 class="center-text">Portfolio &amp; Skills</h3>
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
-            <a href="#portfolio-tab" class="mdl-tabs__tab">Portfolio</a>
-            <a href="#skills-tab" class="mdl-tabs__tab is-active">Skills</a>
+            <a href="#portfolio-tab" class="mdl-tabs__tab is-active">Portfolio</a>
+            <a href="#skills-tab" class="mdl-tabs__tab">Skills</a>
         </div>
-        <div class="mdl-card">
-            <div class="mdl-tabs__panel is-active" id="skills-tab">
-                <ul class="mdl-list">
-                    <app-skill-list-item *ngFor="let skill of skillsList" [skill]="skill"></app-skill-list-item>
-                </ul>
+        <div class="mdl-tabs__panel is-active" id="portfolio-tab">
+            <div class="mdl-grid">
+                <div *ngFor="let item of portfolioList" class="mdl-cell mdl-cell--4-col-phone mdl-cell--4-col-tablet mdl-cell--4-col">
+                    <app-li-portfolio [details]="item"></app-li-portfolio>
+                </div>
             </div>
-            <div class="mdl-tabs__panel" id="portfolio-tab">
-                portfolio
-            </div>
+        </div>
+        <div class="mdl-card mdl-tabs__panel" id="skills-tab">
+            <ul class="mdl-list">
+                <app-li-skill *ngFor="let item of skillsList" [details]="item"></app-li-skill>
+            </ul>
         </div>
     </div>
 </section>

@@ -11,8 +11,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { PortfolioSkillsComponent } from './portfolio-skills/portfolio-skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { FooterComponent } from './footer/footer.component';
-import { DetailListItemComponent } from './detail-list-item/detail-list-item.component';
-import { SkillListItemComponent } from './skill-list-item/skill-list-item.component';
+import { LIDetailComponent } from './li-detail/li-detail.component';
+import { LISkillComponent } from './li-skill/li-skill.component';
+import { LIPortfolioComponent } from './li-portfolio/li-portfolio.component';
 
 @NgModule({
     declarations: [
@@ -22,8 +23,9 @@ import { SkillListItemComponent } from './skill-list-item/skill-list-item.compon
         PortfolioSkillsComponent,
         ExperienceComponent,
         FooterComponent,
-        DetailListItemComponent,
-        SkillListItemComponent
+        LIDetailComponent,
+        LISkillComponent,
+        LIPortfolioComponent
     ],
     imports: [
         BrowserModule,
