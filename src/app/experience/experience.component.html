@@ -1,12 +1,22 @@
-<div id="experience">
-    <h3 class="header center">Experience, Community &amp; Education</h3>
-    <div id="work" class="container-fluid">
-        <app-detail-list-item *ngFor="let experience of workExperiences" [detail]="experience"></app-detail-list-item>
+<section id="experience" class="center-text">
+    <h3>Experience, Community &amp; Education</h3>
+    <div class="mdl-card">
+        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+            <div class="mdl-tabs__tab-bar">
+                <a href="#work-experience" class="mdl-tabs__tab is-active">Work</a>
+                <a href="#community-experience" class="mdl-tabs__tab">Community</a>
+                <a href="#education-experience" class="mdl-tabs__tab">Education</a>
+            </div>
+
+            <div class="mdl-tabs__panel is-active" id="work-experience">
+                <app-detail-list-item *ngFor="let experience of workExperiences" [detail]="experience"></app-detail-list-item>
+            </div>
+            <div class="mdl-tabs__panel" id="community-experience">
+                <app-detail-list-item *ngFor="let experience of communityExperiences" [detail]="experience"></app-detail-list-item>
+            </div>
+            <div class="mdl-tabs__panel" id="education-experience">
+                <app-detail-list-item *ngFor="let experience of educationExperiences" [detail]="experience"></app-detail-list-item>
+            </div>
+        </div>
     </div>
-    <div id="community" class="container-fluid">
-        <app-detail-list-item *ngFor="let experience of communityExperiences" [detail]="experience"></app-detail-list-item>
-    </div>
-    <div id="education" class="container-fluid">
-        <app-detail-list-item *ngFor="let experience of educationExperiences" [detail]="experience"></app-detail-list-item>
-    </div>
-</div>
+</section>

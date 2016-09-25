@@ -1,10 +1,10 @@
-<div class="mdl-grid center">
-    <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--3-col-tablet mdl-cell--4-col-desktop">
+<div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--2-col-tablet mdl-cell--4-col">
         <a href="{{detail.website}}">
             <img class="responsive center" src="{{detail.logo}}" alt="{{detail.orginization}} Logo">
         </a>
     </div>
-    <div class="mdl-cell mdl-cell--12-col-phone mdl-cell--9-col-tablet mdl-cell--8-col-desktop">
+    <div class="mdl-cell mdl-cell--4-col-phone mdl-cell--6-col-tablet mdl-cell--8-col">
         <h4>{{detail.role}}</h4>
         <h5><a href="{{detail.website}}" target="_blank">{{detail.orginization}}</a></h5>
         <h6>{{detail.dates.start | date:'MMMM y'}} – <span *ngIf="detail.dates.end">{{detail.dates.end | date:'MMMM y'}}</span><span *ngIf="!detail.dates.end">Current</span> | {{detail.location}}</h6>
