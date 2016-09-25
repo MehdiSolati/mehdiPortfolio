@@ -12,7 +12,7 @@ export const portfolioList: Array<Object> = [
     }, {
         'title': 'Ballmer Peak',
         'logo': 'assets/images/portfolio/ballmer-peak.png',
-        'website': 'https://github.com/MichaelSolati/funWithMaps',
+        'website': 'https://github.com/MichaelSolati/Ballmer-Peak',
         'description': 'A Meteor web app designed to calculate a programmer\'s BAC and determine if their BAC falls into the legendary "Ballmer Peak" in order for them to reach optimal coding.'
     }
 ];
