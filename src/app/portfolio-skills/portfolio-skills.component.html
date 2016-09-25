@@ -12,9 +12,11 @@
                 </div>
             </div>
         </div>
-        <div class="mdl-card mdl-tabs__panel" id="skills-tab">
+        <div class="mdl-tabs__panel" id="skills-tab">
             <ul class="mdl-list">
-                <app-li-skill *ngFor="let item of skillsList" [details]="item"></app-li-skill>
+                <div *ngFor="let item of skillsList" class="mdl-card">
+                    <app-li-skill [details]="item"></app-li-skill>
+                </div>
             </ul>
         </div>
     </div>

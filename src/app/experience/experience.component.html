@@ -6,15 +6,19 @@
             <a href="#community-experience" class="mdl-tabs__tab">Community</a>
             <a href="#education-experience" class="mdl-tabs__tab">Education</a>
         </div>
-        <div class="mdl-card">
-            <div class="mdl-tabs__panel is-active" id="work-experience">
-                <app-li-detail *ngFor="let experience of workExperiences" [details]="experience"></app-li-detail>
+        <div class="mdl-tabs__panel is-active" id="work-experience">
+            <div *ngFor="let experience of workExperiences" class="mdl-card">
+                <app-li-detail [details]="experience"></app-li-detail>
             </div>
-            <div class="mdl-tabs__panel" id="community-experience">
-                <app-li-detail *ngFor="let experience of communityExperiences" [details]="experience"></app-li-detail>
+        </div>
+        <div class="mdl-tabs__panel" id="community-experience">
+            <div *ngFor="let experience of communityExperiences" class="mdl-card">
+                <app-li-detail [details]="experience"></app-li-detail>
             </div>
-            <div class="mdl-tabs__panel" id="education-experience">
-                <app-li-detail *ngFor="let experience of educationExperiences" [details]="experience"></app-li-detail>
+        </div>
+        <div class="mdl-tabs__panel" id="education-experience">
+            <div *ngFor="let experience of educationExperiences" class="mdl-card">
+                <app-li-detail [details]="experience"></app-li-detail>
             </div>
         </div>
     </div>

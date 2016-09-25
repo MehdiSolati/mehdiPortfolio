@@ -27,17 +27,16 @@ img {
 }
 
 .mdl-card {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 16px auto;
     padding-left: 8px;
     padding-right: 8px;
-    margin-top: 32px;
+    min-height: 0px;
+    height: auto;
     width: calc(100% - 32px);
     max-width: 1080px;
 }
 
 .mdl-tabs__tab-bar {
-    margin-bottom: -24px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 8px;
