@@ -2,7 +2,11 @@ body {
     background-color: #ebeef0;
 }
 
-img.center {
+a {
+  text-decoration: none;
+}
+
+div.center, img.center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +20,17 @@ img.responsive {
     max-width: 100%;
 }
 
-.center {
+.center-text {
     text-align: center;
+}
+
+.mdl-card {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: 32px;
+  width: calc(100% - 32px);
+  max-width: 1080px;
 }
