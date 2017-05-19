@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+img {
+    &.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &.circle {
+        border-radius: 50%;
+    }
+
+    &.responsive {
+        max-width: 100%;
+    }
+}

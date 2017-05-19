@@ -1,0 +1,14 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>{{title}}</md-card-title>
+    <md-card-subtitle *ngIf="link; else noLink"><a [href]="link" target="_blank">{{subtitle}}</a></md-card-subtitle>
+    <ng-template #noLink>{{subtitle}}</ng-template>
+  </md-card-header>
+  <img md-card-image [src]="image">
+  <md-card-content>
+    <ng-content></ng-content>
+  </md-card-content>
+  <md-card-actions>
+    <a md-button *ngIf="link" [href]="link" target="_blank">VIEW SITE</a>
+  </md-card-actions>
+</md-card>

@@ -1,10 +1,10 @@
-import { WebsitePage } from './app.po';
+import { MichaelWebPortfolioPage } from './app.po';
 
-describe('website App', function() {
-  let page: WebsitePage;
+describe('michael-web-portfolio App', () => {
+  let page: MichaelWebPortfolioPage;
 
   beforeEach(() => {
-    page = new WebsitePage();
+    page = new MichaelWebPortfolioPage();
   });
 
   it('should display message saying app works', () => {

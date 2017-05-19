@@ -1,0 +1,17 @@
+@import './variables';
+@import './theme';
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: $background;
+    color: $primary-text;
+    .mat-sidenav-container {
+        color: $primary-text;
+    }
+}
+
+md-chip {
+    &.mat-chip {
+        margin-top: 8px !important;
+    }
+}

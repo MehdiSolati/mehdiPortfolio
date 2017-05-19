@@ -1,41 +1,18 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/Subscription';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
-import { DetailsService } from '../shared/services/details.service';
-import { Experience } from '../shared/interfaces/experience';
+import { ExperienceService } from '../shared/services/experience.service';
 
 @Component({
-    selector: 'app-experience',
-    templateUrl: './experience.component.html',
-    styleUrls: ['./experience.component.css']
+  selector: 'app-experience',
+  templateUrl: './experience.component.html',
+  styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent implements OnInit, OnDestroy {
-    private communityExperiences: Array<Experience> = [];
-    private communitySub: Subscription;
-    private educationExperiences: Array<Experience> = [];
-    private educationSub: Subscription;
-    private workExperiences: Array<Experience> = [];
-    private workSub: Subscription;
+export class ExperienceComponent implements OnInit {
+  public experiences: Observable<any[]>;
+  constructor(private _eService: ExperienceService) { }
 
-    constructor(private detailsService: DetailsService) {
-
-    }
-
-    ngOnInit() {
-        this.communitySub = this.detailsService.getCommunityObservable().subscribe((value) => {
-            this.communityExperiences = value;
-        });
-        this.educationSub = this.detailsService.getEducationObservable().subscribe((value) => {
-            this.educationExperiences = value;
-        });
-        this.workSub = this.detailsService.getWorkObservable().subscribe((value) => {
-            this.workExperiences = value;
-        });
-    }
-
-    ngOnDestroy() {
-        this.communitySub.unsubscribe();
-        this.educationSub.unsubscribe();
-        this.workSub.unsubscribe();
-    }
+  ngOnInit() {
+    this.experiences = this._eService.experience;
+  }
 }

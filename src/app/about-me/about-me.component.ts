@@ -1,25 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-about-me',
-    templateUrl: './about-me.component.html',
-    styleUrls: ['./about-me.component.css']
+  selector: 'app-about-me',
+  templateUrl: './about-me.component.html',
+  styleUrls: ['./about-me.component.scss']
 })
 export class AboutMeComponent implements OnInit {
-    private punchLine: string = '';
-    private punchLines: Array<string> = [
-        '// A pirate trying to write epic code!',
-        'Cirrus, alto cumulus, cirrostratus. Yea, I speak cloud. No biggie.',
-        'Java is a language... Not a hot drink!'
-    ];
-    constructor() { }
+  public punchLine: string = 'My apps are dope, and I code dope shit.';
+  private _punchLines: string[] = [
+    '// A pirate trying to write epic code!',
+    'Cirrus, alto cumulus, cirrostratus. Yea, I speak cloud. No biggie.',
+    'Java is a language... Not a hot drink!'
+  ];
+  constructor() { }
 
-    ngOnInit() {
-        this.setPunchLine();
-    }
+  ngOnInit() {
+    this._setPunchLine();
+  }
 
-    private setPunchLine() {
-        let quote = this.punchLines[Math.floor(Math.random() * this.punchLines.length)];
-        this.punchLine = quote;
-    }
+  private _setPunchLine() {
+    let quote = this._punchLines[Math.floor(Math.random() * this._punchLines.length)];
+    this.punchLine = quote;
+  }
 }
