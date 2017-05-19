@@ -10,9 +10,9 @@ import { ExperienceService } from '../shared/services/experience.service';
 })
 export class ExperienceComponent implements OnInit {
   public experiences: Observable<any[]>;
-  constructor(private _eService: ExperienceService) { }
+  constructor(private _expService: ExperienceService) { }
 
   ngOnInit() {
-    this.experiences = this._eService.experience;
+    this.experiences = this._expService.experience;
   }
 }

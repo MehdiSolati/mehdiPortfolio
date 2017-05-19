@@ -10,6 +10,8 @@ import 'hammerjs';
 
 import { environment } from '../environments/environment';
 
+import { CommunityService } from './shared/services/community.service';
+import { EducationService } from './shared/services/education.service';
 import { ExperienceService } from './shared/services/experience.service';
 import { PortfolioService } from './shared/services/portfolio.service';
 import { SkillsService } from './shared/services/skills.service';
@@ -20,6 +22,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContentCardComponent } from './content-card/content-card.component';
+import { CommunityComponent } from './community/community.component';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,9 @@ import { ContentCardComponent } from './content-card/content-card.component';
     PortfolioComponent,
     SkillsComponent,
     ExperienceComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    CommunityComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +46,8 @@ import { ContentCardComponent } from './content-card/content-card.component';
     AngularFireDatabaseModule
   ],
   providers: [
+    CommunityService,
+    EducationService,
     ExperienceService,
     PortfolioService,
     SkillsService
@@ -49,5 +57,5 @@ import { ContentCardComponent } from './content-card/content-card.component';
   ]
 })
 export class AppModule {
-  constructor(private _eService: ExperienceService, private _pService: PortfolioService, private _sService: SkillsService) { }
+  constructor(private _commService: CommunityService, private _eduService: EducationService, private _expService: ExperienceService, private _pService: PortfolioService, private _sService: SkillsService) { }
 }

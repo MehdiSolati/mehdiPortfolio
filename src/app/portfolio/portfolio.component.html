@@ -2,7 +2,7 @@
   <div class="row">
     <div *ngFor="let item of portfolio | async" class="col-12 col-sm-6 col-lg-4">
       <md-card>
-        <a [href]="item.website" target="_blank">
+        <a [href]="item.website" target="_blank" rel="noopener">
           <div class="card-image" [style.background-image]="sanitizeImage(item.logo)">
             <h3 class="card-title">{{item.title}}</h3>
           </div>
@@ -13,7 +13,7 @@
           </p>
         </md-card-content>
         <md-card-actions>
-          <a [href]="item.website" target="_blank" md-button color="accent">VIEW MORE</a>
+          <a [href]="item.website" target="_blank" rel="noopener" md-button color="accent">VIEW MORE</a>
         </md-card-actions>
       </md-card>
     </div>

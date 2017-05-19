@@ -1,0 +1,17 @@
+<section class="container">
+  <div class="row">
+    <div *ngFor="let community of communities | async" class="col-12 col-sm-6 col-lg-4">
+      <app-content-card [image]="community.logo" [link]="community.website" [subtitle]="community.orginization" [title]="community.role">
+        <md-chip-list>
+          <md-chip selected="true" color="primary">
+            Start: {{community.dates.start | date:'MMM y'}}
+          </md-chip>
+          <md-chip *ngIf="community.dates.end" selected="true" color="accent">
+            End: {{community.dates.end | date:'MMM y'}}
+          </md-chip>
+        </md-chip-list>
+        <p>{{community.description}}</p>
+      </app-content-card>
+    </div>
+  </div>
+</section>

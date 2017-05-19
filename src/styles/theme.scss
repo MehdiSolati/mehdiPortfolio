@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import '~@angular/material/theming';
-// @import '~mdi/scss/materialdesignicons';
 @include mat-core();
 
 $primary: mat-palette($mat-pink, A400, A100, A700);
-$accent: mat-palette($mat-grey, A200, A100, A400);
+$accent: mat-palette($mat-deep-purple, A200, A100, A400);
 $warn: mat-palette($mat-red);
 $theme: mat-light-theme($primary, $accent, $warn);
 @include angular-material-theme($theme);

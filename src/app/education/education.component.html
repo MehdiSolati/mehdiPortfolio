@@ -1,0 +1,17 @@
+<section class="container">
+  <div class="row">
+    <div *ngFor="let education of educations | async" class="col-12 col-sm-6 col-lg-4">
+      <app-content-card [image]="education.logo" [link]="education.website" [subtitle]="education.orginization" [title]="education.role">
+        <md-chip-list>
+          <md-chip selected="true" color="primary">
+            Start: {{education.dates.start | date:'MMM y'}}
+          </md-chip>
+          <md-chip *ngIf="education.dates.end" selected="true" color="accent">
+            End: {{education.dates.end | date:'MMM y'}}
+          </md-chip>
+        </md-chip-list>
+        <p>{{education.description}}</p>
+      </app-content-card>
+    </div>
+  </div>
+</section>

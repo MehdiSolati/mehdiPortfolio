@@ -18,6 +18,10 @@ export class AboutMeComponent implements OnInit {
     this._setPunchLine();
   }
 
+  public goToURL(url: string): void {
+    window.open(url, '_blank');
+  }
+
   private _setPunchLine() {
     let quote = this._punchLines[Math.floor(Math.random() * this._punchLines.length)];
     this.punchLine = quote;
