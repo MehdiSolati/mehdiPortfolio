@@ -37,7 +37,7 @@ import { EducationComponent } from './education/education.component';
     EducationComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'michaelsolati'}),
     BrowserAnimationsModule,
     FormsModule,
     HttpModule,
