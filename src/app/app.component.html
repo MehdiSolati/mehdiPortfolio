@@ -1,21 +1,33 @@
 <md-toolbar color="primary">
+  <button md-button (tap)="toggleNav()">
+    <md-icon>menu</md-icon>
+  </button>
   <span>{{title}}</span>
 </md-toolbar>
-<app-about-me></app-about-me>
-<md-tab-group>
-  <md-tab label="Portfolio">
-    <app-portfolio></app-portfolio>
-  </md-tab>
-  <md-tab label="Skills">
-    <app-skills></app-skills>
-  </md-tab>
-  <md-tab label="Experience">
-    <app-experience></app-experience>
-  </md-tab>
-  <md-tab label="Community">
-    <app-community></app-community>
-  </md-tab>
-  <md-tab label="Education">
-    <app-education></app-education>
-  </md-tab>
-</md-tab-group>
+<md-sidenav-container>
+  <md-sidenav #sidenav>
+    <md-nav-list>
+      <a md-list-item *ngFor="let tab of tabs; let i = index" (click)="selectTab(i)"> {{ tab }} </a>
+    </md-nav-list>
+  </md-sidenav>
+  <section id="content-section">
+    <app-about-me></app-about-me>
+    <md-tab-group (selectedIndexChange)="tabSwitch($event)" [selectedIndex]="active">
+      <md-tab label="Portfolio">
+        <app-portfolio></app-portfolio>
+      </md-tab>
+      <md-tab label="Skills">
+        <app-skills></app-skills>
+      </md-tab>
+      <md-tab label="Experience">
+        <app-experience></app-experience>
+      </md-tab>
+      <md-tab label="Community">
+        <app-community></app-community>
+      </md-tab>
+      <md-tab label="Education">
+        <app-education></app-education>
+      </md-tab>
+    </md-tab-group>
+  </section>
+</md-sidenav-container>
