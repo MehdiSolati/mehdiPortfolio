@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class PortfolioService {
   private _portfolio: Observable<any[]>;
   constructor(private _afd: AngularFireDatabase) {
-    this._portfolio = this._afd.list('/portfolio', { query: { orderByChild: 'date' } });
+    this._portfolio = this._afd.list('/portfolio');
   }
   get portfolio(): Observable<any[]> {
     return this._portfolio;
