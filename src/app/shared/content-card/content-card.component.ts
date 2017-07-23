@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-content-card',
   templateUrl: './content-card.component.html',
   styleUrls: ['./content-card.component.scss']
@@ -10,9 +11,9 @@ export class ContentCardComponent implements OnInit {
   @Input() link: string;
   @Input() subtitle: string;
   @Input() title: string;
+
   constructor() { }
 
   ngOnInit() {
   }
-
 }

@@ -1,18 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import { NGMeta } from 'ngmeta';
 
 import { CommunityService } from '../shared/services/community.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'app-community',
   templateUrl: './community.component.html',
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent implements OnInit {
-  public communities: Observable<any[]>;
-  constructor(private _commService: CommunityService) { }
+  constructor(private _cs: CommunityService, private _ngmeta: NGMeta) { }
 
   ngOnInit() {
-    this.communities = this._commService.communities;
+    this._ngmeta.title = 'Community | Michael Solati 👨‍💻☕🍺';
+  }
+
+  get communities(): Observable<any> {
+    return this._cs.communities;
   }
 }

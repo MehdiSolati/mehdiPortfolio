@@ -12,5 +12,6 @@ export const environment = {
     projectId: 'michaelsolati-com',
     storageBucket: 'michaelsolati-com.appspot.com',
     messagingSenderId: '653176308527'
-  }
+  },
+  applicationServerKey: null
 };

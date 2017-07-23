@@ -1,0 +1,17 @@
+<md-sidenav-container>
+  <md-sidenav #sidenav>
+    <md-nav-list>
+      <a *ngFor="let route of routes "md-list-item class="side-nav" [routerLink]="route.path" (click)="navClose()">{{route.name}}</a>
+    </md-nav-list>
+  </md-sidenav>
+  <md-toolbar color="primary" class="sticky-header">
+    <button md-button class="show-small" (click)="navToggle()"><md-icon>menu</md-icon></button>
+    <span><a [routerLink]="['/']" class="white">Michael Solati</a></span>
+    <span class="navbar-spacer hide-small"></span>
+    <a *ngFor="let route of routes" class="hide-small top-nav white" [routerLink]="route.path">{{route.name}}</a>
+  </md-toolbar>
+  <div id="content-section" class="full-window">
+    <div class="navbar-spacing"></div>
+    <ng-content></ng-content>
+  </div>
+</md-sidenav-container>

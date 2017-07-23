@@ -9,7 +9,7 @@ describe('CommunityService', () => {
     });
   });
 
-  it('should ...', inject([CommunityService], (service: CommunityService) => {
+  it('should be created', inject([CommunityService], (service: CommunityService) => {
     expect(service).toBeTruthy();
   }));
 });

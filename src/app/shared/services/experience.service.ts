@@ -1,14 +1,32 @@
-import { Injectable } from '@angular/core';
-import { AngularFireDatabase } from 'angularfire2/database';
-import { Observable } from 'rxjs';
+import { Injectable, NgZone } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
+import * as firebase from 'firebase';
+declare var window: any;
 
 @Injectable()
 export class ExperienceService {
-  private _experience: Observable<any[]>;
-  constructor(private _afd: AngularFireDatabase) {
-    this._experience = this._afd.list('/experience');
+  private _experiences: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+
+  constructor(private _zone: NgZone) {
+    if (typeof window !== 'undefined') {
+      this._query();
+    }
   }
-  get experience(): Observable<any[]> {
-    return this._experience;
+
+  get experiences(): Observable<any[]> {
+    return this._experiences.asObservable();
+  }
+
+  private _query(): void {
+    firebase
+      .database()
+      .ref('experience')
+      .on('value', (snapshot: any) => {
+        const query: any[] = snapshot.val();
+        this._zone.run(() => {
+          this._experiences.next(query);
+        });
+      });
   }
 }

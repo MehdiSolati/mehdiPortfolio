@@ -1,0 +1,18 @@
+{
+  "dynamic": {
+    "group": [{
+      "name": "firebase",
+      "urls": {
+        "https://michaelsolati.com/": {
+          "match": "prefix"
+        }
+      },
+      "cache": {
+        "optimizeFor": "performance",
+        "maxAgeMs": 3600000,
+        "maxEntries": 20,
+        "strategy": "lru"
+      }
+    }]
+  }
+}

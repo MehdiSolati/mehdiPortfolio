@@ -1,14 +1,14 @@
-import { MichaelWebPortfolioPage } from './app.po';
+import { MichaelsolatiComPage } from './app.po';
 
-describe('michael-web-portfolio App', () => {
-  let page: MichaelWebPortfolioPage;
+describe('michaelsolati-com App', () => {
+  let page: MichaelsolatiComPage;
 
   beforeEach(() => {
-    page = new MichaelWebPortfolioPage();
+    page = new MichaelsolatiComPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
