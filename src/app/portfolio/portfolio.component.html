@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div *ngFor="let item of portfolio | async" class="col-12 col-sm-6 col-lg-4">
-      <md-card>
+      <md-card class="custom-card">
         <a [href]="item.website" target="_blank" rel="noopener">
           <div class="card-image" [style.background-image]="sanitizeImage(item.logo)">
             <h3 class="card-title">{{item.title}}</h3>

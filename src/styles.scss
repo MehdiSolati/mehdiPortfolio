@@ -46,6 +46,37 @@ img {
   }
 }
 
+md-card.custom-card {
+  padding: 0px;
+  margin: 16px 0px;
+  md-card-content {
+    padding: 0px 16px;
+  }
+  md-card-actions {
+    padding: 0px 16px 24px 16px;
+  }
+  div.card-image {
+    color: #fff;
+    background: no-repeat #000000;
+    background-size: contain;
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 16px;
+    position: relative;
+    h3.card-title {
+      width: 100%;
+      height: auto;
+      color: white !important;
+      background: rgba(000, 000, 000, 0.5);
+      position: absolute;
+      bottom: 0;
+      padding: 8px 16px;
+      margin: 0px;
+    }
+  }
+}
+
 nav {
   position: absolute;
   top: 0;

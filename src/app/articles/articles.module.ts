@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { SharedModule } from '../shared/shared.module'
 
-import { HomeComponent } from './home.component';
+import { ArticlesComponent } from './articles.component';
 
 @NgModule({
   imports: [
@@ -13,11 +13,11 @@ import { HomeComponent } from './home.component';
     MaterialModule,
     SharedModule,
     RouterModule.forChild([
-      { path: '', pathMatch: 'full', component: HomeComponent }
+      { path: '', pathMatch: 'full', component: ArticlesComponent }
     ])
   ],
   declarations: [
-    HomeComponent
+    ArticlesComponent
   ]
 })
-export class HomeModule { }
+export class ArticlesModule { }

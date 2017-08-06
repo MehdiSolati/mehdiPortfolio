@@ -5,6 +5,9 @@ const routes: Routes = [{
   path: '',
   loadChildren: 'app/home/home.module#HomeModule'
 }, {
+  path: 'articles',
+  loadChildren: 'app/articles/articles.module#ArticlesModule'
+}, {
   path: 'education',
   loadChildren: 'app/education/education.module#EducationModule'
 }, {

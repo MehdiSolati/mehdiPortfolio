@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   @ViewChild('sidenav') sidenav: MdSidenav;
   private _routes: any[] = [
     { name: 'Portfolio', path: ['/', 'portfolio'] },
+    { name: 'Articles', path: ['/', 'articles'] },
     { name: 'Experience', path: ['/', 'experience'] },
     { name: 'Education', path: ['/', 'education'] }
   ];

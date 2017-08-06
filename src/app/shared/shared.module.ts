@@ -16,6 +16,8 @@ import { PortfolioService } from './services/portfolio.service';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContentCardComponent } from './content-card/content-card.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
+
 firebase.initializeApp(environment.firebase);
 
 @NgModule({
@@ -35,11 +37,13 @@ firebase.initializeApp(environment.firebase);
   ],
   declarations: [
     NavbarComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    TruncatePipe
   ],
   exports: [
     NavbarComponent,
-    ContentCardComponent
+    ContentCardComponent,
+    TruncatePipe
   ]
 })
 export class SharedModule {

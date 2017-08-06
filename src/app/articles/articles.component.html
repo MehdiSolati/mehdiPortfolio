@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let post of posts | async" class="col-12 col-sm-6 col-lg-4">
+      <md-card class="custom-card">
+        <a [href]="post.guid" target="_blank" rel="noopener">
+          <div class="card-image" [style.background-image]="sanitizeImage(post.image)">
+            <h3 class="card-title">{{post.title}}</h3>
+          </div>
+        </a>
+        <md-card-content>
+          <p>
+            {{post.description | truncate}}
+          </p>
+        </md-card-content>
+        <md-card-actions>
+          <a [href]="post.guid" target="_blank" rel="noopener" md-button color="accent">READ POST</a>
+        </md-card-actions>
+      </md-card>
+    </div>
+  </div>
+</div>
