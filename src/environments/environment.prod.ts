@@ -8,5 +8,6 @@ export const environment = {
     storageBucket: 'michaelsolati-com.appspot.com',
     messagingSenderId: '653176308527'
   },
-  applicationServerKey: null
+  applicationServerKey: null,
+  medium: 'https://medium.com/feed/@MichaelSolati'
 };

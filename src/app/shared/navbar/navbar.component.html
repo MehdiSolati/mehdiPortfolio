@@ -1,7 +1,7 @@
-<md-sidenav-container>
+<md-sidenav-container #container>
   <md-sidenav #sidenav>
     <md-nav-list>
-      <a *ngFor="let route of routes "md-list-item class="side-nav" [routerLink]="route.path" (click)="navClose()">{{route.name}}</a>
+      <a *ngFor="let route of routes" md-list-item class="side-nav" [routerLink]="route.path" (click)="navClose()">{{route.name}}</a>
     </md-nav-list>
   </md-sidenav>
   <md-toolbar color="primary" class="sticky-header">
