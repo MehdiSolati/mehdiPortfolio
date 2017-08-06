@@ -10,7 +10,8 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "manifest.json"
+        "manifest.json",
+        "hammer.min.js.map"
       ],
       "index": "index.html",
       "main": "main.ts",
