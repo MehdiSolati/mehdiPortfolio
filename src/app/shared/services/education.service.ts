@@ -6,7 +6,7 @@ declare var window: any;
 
 @Injectable()
 export class EducationService {
-private _educations: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  private _educations: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
 
   constructor(private _zone: NgZone) {
     if (typeof window !== 'undefined') {
@@ -23,7 +23,12 @@ private _educations: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
       .database()
       .ref('education')
       .on('value', (snapshot: any) => {
-        const query: any[] = snapshot.val();
+        let query: any[] = [];
+        snapshot.forEach(value => {
+          const data = value.val();
+          data['key'] = value.key;
+          query.push(data);
+        });
         this._zone.run(() => {
           this._educations.next(query);
         });

@@ -23,7 +23,12 @@ export class ExperienceService {
       .database()
       .ref('experience')
       .on('value', (snapshot: any) => {
-        const query: any[] = snapshot.val();
+        let query: any[] = [];
+        snapshot.forEach(value => {
+          const data = value.val();
+          data['key'] = value.key;
+          query.push(data);
+        });
         this._zone.run(() => {
           this._experiences.next(query);
         });
