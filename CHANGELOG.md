@@ -1,3 +1,9 @@
+#### 5.0.2 (2017-08-06)
+
+##### Bug Fixes
+
+* **services:** call services as needed to be SSR friendly (d54a236c)
+
 #### 5.0.1 (2017-08-06)
 
 ##### Build System / Dependencies
