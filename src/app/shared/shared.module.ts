@@ -47,16 +47,7 @@ firebase.initializeApp(environment.firebase);
   ]
 })
 export class SharedModule {
-  constructor(
-    private _edus: EducationService,
-    private _exps: ExperienceService,
-    private _ms: MediumService,
-    private _ngmeta: NGMeta,
-    private _ps: PortfolioService,
-    private _sw: NgServiceWorker
-  ) {
-    this._ngmeta.scrollEnabled = true;
-
+  constructor(private _sw: NgServiceWorker) {
     if (environment.applicationServerKey) {
       this._sw.registerForPush({
         applicationServerKey: environment.applicationServerKey

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
@@ -9,38 +8,34 @@ import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class MediumService {
-  private _posts: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  private _posts: Observable<any[]>;
   private _rssToJson: string = 'https://rss2json.com/api.json?rss_url=';
 
   constructor(private _http: Http) {
-    this._load(environment.medium);
+    this._posts = this._load(environment.medium);
   }
 
   get posts(): Observable<any[]> {
-    return this._posts.asObservable();
+    return this._posts;
   }
 
-  private _handleError(error: any) {
+  private _handleError(error: any): Observable<any> {
     return Observable.throw(error.message);
   }
 
-  private _handleSuccess(res: Response) {
-    const body: any = res.json();
-    return (body.items || []);
-  }
 
-  private _load(medium: string) {
-    this._http.get(this._rssToJson + medium)
-      .map(this._handleSuccess)
-      .catch(this._handleError)
-      .subscribe((posts: any[]) => {
+  private _load(medium: string): Observable<any[]> {
+    return this._http.get(this._rssToJson + medium)
+      .map((res: Response) => {
+        const body: any = res.json();
+        let posts = (body.items || []);
         const processed: any[] = this._processPosts(posts);
         if (processed.length > 11) {
-          this._posts.next(processed.splice(0, 12));
-        } else {
-          this._posts.next(processed);
+          return processed.splice(0, 12);
         }
-      });
+        return processed;
+      })
+      .catch(this._handleError);
   }
 
   private _processPosts(posts: any[]): any[] {
